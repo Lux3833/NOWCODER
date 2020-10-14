@@ -1,4 +1,4 @@
-package PAT_乙级;
+package PATII;
 
 import java.util.Scanner;
 
