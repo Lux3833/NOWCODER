@@ -26,7 +26,7 @@ Case #2: true
 Case #3: true
 Case #4: false
  * */
-public class test1 {
+public class Test1 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -39,6 +39,7 @@ public class test1 {
             a = scanner.nextLong();
             b = scanner.nextLong();
             c = scanner.nextLong();
+
             boolean flag = (a+b)>c ? true : false;
             result[i] = flag;
         }
