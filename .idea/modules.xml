@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaOfIntellij.iml" filepath="$PROJECT_DIR$/JavaOfIntellij.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NOWCODER.iml" filepath="$PROJECT_DIR$/NOWCODER.iml" />
     </modules>
   </component>
 </project>
