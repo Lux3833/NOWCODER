@@ -49,9 +49,11 @@ public class Test8 {
         int[] poseB = new int[3];
 
         for(int i = 0;i < N;i++){
-            String str = scanner.nextLine();
-            A[i] = str.substring(0,1).charAt(0);
-            B[i] = str.substring(2).charAt(0);
+//            String str = scanner.nextLine();
+//            A[i] = str.substring(0,1).charAt(0);
+//            B[i] = str.substring(2).charAt(0);
+              A[i] = scanner.next().charAt(0);
+              B[i] = scanner.next().charAt(0);
         }
         for(int i = 0;i < N;i++){
             if(A[i] == 'C' && B[i] == 'J' || A[i] == 'J' && B[i] == 'B' || A[i] == 'B' && B[i] == 'C'){
