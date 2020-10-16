@@ -1,5 +1,7 @@
 package PATII;
 
+    import java.util.Scanner;
+
 /**
  * @author - Lx
  * @date - 2020/10/15 - 0:07
@@ -23,4 +25,61 @@ package PATII;
  * 97 101 103
  */
 public class Test3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int M = scanner.nextInt();
+        int N = scanner.nextInt();
+        boolean flag = true;
+        int index = 0;
+        int count = 0;
+        scanner.close();
+
+        for(int i = 2;i < Integer.MAX_VALUE;i++){
+            int temp = (int) Math.sqrt(i);
+            for(int j = 1;j <= temp;j++){
+                if(i % j == 0 && j != 1){
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag){
+                index++;
+                if(index >= M && index <= N){
+                    System.out.print(i);
+                    count++;
+                    if(count % 10 == 0){
+                        System.out.println();
+                    }else if(count == N - M + 1){
+                        return;
+                    }else{
+                        System.out.print(" ");
+                    }
+                }
+            }else{
+                flag = true;
+            }
+        }
+
+//        for(int i = M;i <= N;i++){
+//            int temp = (int)Math.sqrt(i);
+//            for(int j = 2;j <= temp;j++){
+//                if(i % j == 0){
+//                    flag = false;
+//                    break;
+//                }
+//            }
+//            if(flag){
+//                System.out.print(i);
+//                count++;
+//                if(count == 10){
+//                    System.out.println();
+//                    count = 0;
+//                }else{
+//                    System.out.print(" ");
+//                }
+//            }else{
+//                flag = true;
+//            }
+//        }
+    }
 }
