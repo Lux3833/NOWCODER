@@ -1,5 +1,7 @@
 package PATII;
 
+import java.util.*;
+
 /**
  * @author - Lx
  * @date - 2020/10/23 - 0:17
@@ -27,4 +29,42 @@ package PATII;
  * 2 150
  */
 public class Test22 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        ArrayList<Digger> list = new ArrayList<Digger>();
+        HashMap<Integer,Integer> hashMap = new HashMap<Integer, Integer>();
+        for(int i = 0;i < N;i++){
+            list.add(new Digger(scanner.nextInt(),scanner.nextInt()));
+        }
+        scanner.close();
+        Iterator<Digger> iterator = list.iterator();
+        while (iterator.hasNext()){
+            Digger digger = iterator.next();
+            if(hashMap.containsKey(digger.schoolNum)){
+                int current = hashMap.get(digger.schoolNum);
+                hashMap.put(digger.schoolNum,current+digger.score);
+            }else{
+                hashMap.put(digger.schoolNum, digger.score);
+            }
+        }
+        int topNum = 0;
+        int topScore = 0;
+        for( Map.Entry<Integer,Integer> entry : hashMap.entrySet()){
+                if(entry.getValue() > topScore){
+                    topScore = entry.getValue();
+                    topNum = entry.getKey();
+                }
+        }
+        System.out.print(topNum+" "+topScore);
+    }
+
+}
+class Digger{
+    public int schoolNum;
+    public int score;
+    public Digger(int num,int score){
+        this.schoolNum = num;
+        this.score = score;
+    }
 }
