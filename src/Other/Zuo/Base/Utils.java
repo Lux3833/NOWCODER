@@ -1,13 +1,14 @@
-package Other.左神;
+package Other.Zuo.Base;
+
 import java.util.Scanner;
+
 /**
- * @title: InputNums
+ * @title: Utils
  * @Author: Lux_er
- * @Date: 2021/3/11 0011 下午 6:57
+ * @Date: 2021/3/25 0025 下午 9:27
  * @Description:
- * 提供公共方法
  */
-class Utils {
+public class Utils {
     public int[] inputNums(){
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -31,5 +32,30 @@ class Utils {
             System.out.print(nums[i]+" ");
         }
         System.out.println();
+    }
+    public String[] inputStrs(){
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        String[] strs = new String[n];
+        for (int i = 0; i < n; i++) {
+            strs[i] = scanner.next();
+        }
+        return strs;
+    }
+    public double intputDouble(){
+        Scanner scanner = new Scanner(System.in);
+        double res = scanner.nextDouble();
+        return res;
+    }
+}
+
+class ListNode {
+    int val; ListNode next;
+    ListNode() {}
+    ListNode(int val) {
+        this.val = val;
+    }
+    ListNode(int val, ListNode next) {
+        this.val = val; this.next = next;
     }
 }
