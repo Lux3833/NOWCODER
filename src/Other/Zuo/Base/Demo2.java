@@ -1,13 +1,13 @@
 package Other.Zuo.Base;
 
 /**
- * @title: Demo02
+ * @title: Demo2
  * @Author: Lux_er
  * @Date: 2021/3/31 0031 下午 6:15
  * @Description:
  * 用递归求出数组中的最大值
  */
-public class Demo02 {
+public class Demo2 {
     public static void main(String[] args) {
         Utils utils = new Utils();
         int[] nums = utils.inputNums();
