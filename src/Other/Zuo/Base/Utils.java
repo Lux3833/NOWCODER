@@ -47,6 +47,12 @@ public class Utils {
         double res = scanner.nextDouble();
         return res;
     }
+    public void swap(int[] arr,int i,int j){
+        int temp = 0;
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }
 
 class ListNode {
@@ -57,5 +63,19 @@ class ListNode {
     }
     ListNode(int val, ListNode next) {
         this.val = val; this.next = next;
+    }
+}
+
+class TreeNode{
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(){};
+    TreeNode(int val) {
+        this.val = val;
+    }
+    TreeNode(int val, TreeNode left) {
+        this.val = val;
+        this.left = left;
     }
 }

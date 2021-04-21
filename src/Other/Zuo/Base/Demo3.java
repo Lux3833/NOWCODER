@@ -29,7 +29,9 @@ public class Demo3 {
             return 0;
         }
         int mid = l + ((r - l) >> 1);
-        return process( nums,l,mid)+process(nums,mid+1,r)+merge(nums,l,mid,r);
+        return process( nums,l,mid)+
+                process(nums,mid+1,r)+
+                merge(nums,l,mid,r);
     }
 
     private static int merge(int[] nums, int l, int mid, int r) {
