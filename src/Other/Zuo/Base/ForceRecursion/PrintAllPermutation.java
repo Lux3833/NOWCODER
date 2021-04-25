@@ -32,6 +32,21 @@ public class PrintAllPermutation {
             swap(chs,i,j);
         }
     }
+    // 不重复添加
+    private static void process2(char[] chs, int i, ArrayList<String> res) {
+        if(i == chs.length){
+            res.add(String.valueOf(chs));
+        }
+        boolean[] visit = new boolean[26];
+        for (int j = i; j < chs.length; j++) {
+            if(!visit[chs[j]-'a']){
+                visit[chs[j]-'a'] = true;
+                swap(chs,i,j);
+                process(chs,i+1,res);
+                swap(chs,i,j);
+            }
+        }
+    }
 
     private static void swap(char[] chs, int i, int j) {
         char temp = chs[i];

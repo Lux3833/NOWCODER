@@ -1,8 +1,9 @@
-package Other.TeacherZuo;
+package Other.Zuo.Base.ForceRecursion;
+
 /**
- * @title: Test5
+ * @title: Knapsack
  * @Author: Lux_er
- * @Date: 2021/3/21 0021 下午 4:53
+ * @Date: 2021/4/25 0025 上午 9:24
  * @Description:
  * 给定两个长度都为N的数组weights和values,
  * weights[i]和values[i]分别代表i号物品的重量和价值。
@@ -10,16 +11,7 @@ package Other.TeacherZuo;
  * 你装的物品不能超过这个重量。
  * 返回你能装下最多的价值是多少？
  */
-public class Test5 {
-    public static void main(String args[]){
-        Utils utils = new Utils();
-        int[] weights = utils.inputNums();
-        int[] values = utils.inputNums();
-        int bag = utils.inputNumber();
-        int maxValue = process(weights, values, 0, 0, bag);
-        System.out.println(maxValue);
-    }
-
+public class Knapsack {
     public static int process(int[] weights,int[] values,int index,int alreadyW,int bag){
         if(alreadyW > bag){
             return -1;//没有可行方案
