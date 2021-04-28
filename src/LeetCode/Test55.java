@@ -12,33 +12,21 @@ package LeetCode;
 public class Test55 {
     public static void main(String[] args) {
         Utils utils = new Utils();
-        int[] arr = utils.inputNums();
-        boolean res = cap(arr,0);
+        int[] nums = utils.inputNums();
+        boolean res = cap(nums);
         System.out.println(res);
     }
 
-    private static boolean cap(int[] arr, int i) {
-        if(arr == null || arr.length == 0 ){
-            return false;
-        }
-        if(arr[i]+i >= arr.length-1){
-            return true;
-        }
-        if(arr[arr[i]+i] == 0){
-            return false;
-        }
-        int res = Integer.MIN_VALUE;
-        int index = i;
-        for (int j = i; j < arr[i]+i; j++) {
-            if(res <= arr[j]+j){
-                res = arr[j]+j;
-                index = j;
+    private static boolean cap(int[] nums) {
+        int n = nums.length;
+        int rightmost = 0;
+        for (int i = 0; i < n; ++i) {
+            if (i <= rightmost) {
+                rightmost = Math.max(rightmost, i + nums[i]);
+                if (rightmost >= n - 1) {
+                    return true;
+                }
             }
-        }
-        if(arr[index]+index >= arr.length-1){
-            return true;
-        }else{
-            cap(arr, index);
         }
         return false;
     }
