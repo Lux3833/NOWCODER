@@ -21,11 +21,13 @@ public class Graph_DFS {
         while (!stack.isEmpty()) {
             GraphNode cur = stack.pop();
             for (GraphNode next : cur.nexts) {
-                stack.push(cur);
-                stack.push(next);
-                set.add(next);
-                System.out.println(next.value);
-                break;
+                if(!set.contains(next)){
+                    stack.push(cur);
+                    stack.push(next);
+                    set.add(next);
+                    System.out.println(next.value);
+                    break;
+                }
             }
         }
     }
