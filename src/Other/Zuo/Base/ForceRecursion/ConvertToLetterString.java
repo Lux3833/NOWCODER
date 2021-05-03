@@ -41,4 +41,33 @@ public class ConvertToLetterString {
         //str[index] == '3'~'9'
         return process(str, index + 1);
     }
+
+    //动态规划
+    public static int dpWay(String s){
+        if(s == null || s.length() == 0){
+            return 0;
+        }
+        char[] ch = s.toCharArray();
+        int N = ch.length;
+        int[] dp = new int[N+1];
+        dp[N] = 1;
+        for (int i = N-1; i >= 0; i--) {
+            if(ch[i] == '0'){
+                dp[i] = 0;
+            }
+            if(ch[i] == '1'){
+                dp[i] = dp[i+1];
+                if(i+1 < N){
+                    dp[i] += dp[i+2];
+                }
+            }
+            if(ch[i] == '2'){
+                dp[i] = dp[i+1];
+                if(i+1 < N && (ch[i+1] >= '0' && ch[i+1] <= '6')){
+                    dp[i] += dp[i+2];
+                }
+            }
+        }
+        return dp[0];
+    }
 }
