@@ -41,6 +41,7 @@ public class KMP {
         next[0] = -1;
         next[1] = 0;
         int i = 2;
+        // cn指拿哪个位置的字符和i-1位置的字符比较
         int cn = 0;
         while(i < next.length){
             if(ms[i-1] == ms[cn]){
