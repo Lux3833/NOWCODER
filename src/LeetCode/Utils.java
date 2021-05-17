@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -46,6 +47,27 @@ public class Utils {
         Scanner scanner = new Scanner(System.in);
         double res = scanner.nextDouble();
         return res;
+    }
+    public void printIntNum(int[] nums){
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i]+" ");
+        }
+    }
+    public void printIntMatrix(int[][] matrix){
+        int m = matrix.length;
+        int n = matrix[0].length;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(matrix[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    public void printListInteger(List<Integer> list){
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i)+" ");
+        }
+        System.out.println();
     }
 }
 class ListNode {
