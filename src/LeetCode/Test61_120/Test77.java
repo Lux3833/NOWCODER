@@ -1,6 +1,6 @@
 package LeetCode.Test61_120;
 
-import LeetCode.Utils;
+import LeetCode.Utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

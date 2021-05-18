@@ -9,7 +9,7 @@ package LeetCode.Test61_120;
 public class ListNode {
         int val;
         ListNode next;
-        ListNode() {}
+        public ListNode() {}
         ListNode(int val) {
         this.val = val;
         }
