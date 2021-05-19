@@ -74,4 +74,11 @@ public class Utils {
         }
         System.out.println();
     }
+    public void printListNode(ListNode head){
+        ListNode temp = head;
+        while(temp != null){
+            System.out.print(temp.val+" ");
+            temp = temp.next;
+        }
+    }
 }
