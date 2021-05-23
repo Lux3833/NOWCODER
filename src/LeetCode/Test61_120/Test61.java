@@ -1,6 +1,7 @@
 package LeetCode.Test61_120;
 
-import LeetCode.Utils;
+import LeetCode.Utils.ListNode;
+import LeetCode.Utils.Utils;
 
 /**
  * @title: Test61
